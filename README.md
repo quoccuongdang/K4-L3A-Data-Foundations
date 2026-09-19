@@ -262,3 +262,58 @@ Xem chi tiết tại `docs/SCORING.md`. Tóm tắt:
 ```bash
 pytest tests/ -v
 ```
+
+## Chạy Benchmark 7 Metric
+
+```bash
+# Đầy đủ retrieval + câu trả lời Agent
+python bench.py
+
+# Chỉ đánh giá retrieval, không gọi LLM
+python bench.py --retrieval-only
+
+# A/B với audience pre-filter
+python bench.py --audience-filter
+```
+
+Kết quả được ghi vào `ket_qua_benchmark.txt` và `benchmark/results.json`. Gold set nằm trong `benchmark/gold_queries.json`; định nghĩa chi tiết xem `benchmark/README.md`.
+
+---
+
+## Chạy Giao Diện Web
+
+Giao diện gồm frontend React + Vite + Tailwind CSS và API FastAPI kết nối trực tiếp với pipeline RAG trong `chat.py`.
+
+### 1. Cài thư viện
+
+```bash
+pip install -r requirements-web.txt
+cd frontend
+npm install
+```
+
+### 2. Chạy chế độ phát triển
+
+Mở hai terminal tại thư mục dự án:
+
+```bash
+# Terminal 1 — API RAG
+python web_app.py
+
+# Terminal 2 — React UI
+cd frontend
+npm run dev
+```
+
+Truy cập `http://127.0.0.1:5173`. Vite sẽ chuyển tiếp các request `/api` tới FastAPI ở cổng `8000`.
+
+### 3. Chạy bản production cục bộ
+
+```bash
+cd frontend
+npm run build
+cd ..
+python web_app.py
+```
+
+Sau khi build, FastAPI phục vụ cả giao diện và API tại `http://127.0.0.1:8000`.

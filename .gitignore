@@ -18,5 +18,12 @@ __pycache__/
 .venv/
 src_w_solution/
 
+# React / Vite
+frontend/node_modules/
+frontend/dist/
+
+# Local embedding cache (generated, may be large and backend-specific)
+data/university/.embeddings_cache.pkl
+
 # Instructor-only notes (chứa gợi ý/đáp án chấm bài, không public cho học viên)
 docs/INSTRUCTOR_GUIDE.md

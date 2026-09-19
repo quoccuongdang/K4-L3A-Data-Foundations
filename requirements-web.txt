@@ -1,0 +1,4 @@
+-r requirements.txt
+fastapi==0.117.1
+uvicorn[standard]==0.37.0
+google-genai==1.39.1

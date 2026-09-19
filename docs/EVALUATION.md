@@ -4,6 +4,22 @@ Trong lab này, chúng ta không chỉ hỏi "Nó chạy không?" mà hỏi **"C
 
 > Xem `docs/SCORING.md` để biết thang điểm (rubric) chấm điểm chính thức.
 
+## Bộ 7 metric nhóm sử dụng cho benchmark
+
+Benchmark chạy 5 query chung trong `benchmark/gold_queries.json` và báo cáo 7 chỉ số sau:
+
+| Metric | Ý nghĩa |
+|---|---|
+| `Recall@1` | Tỷ lệ bằng chứng gold được bao phủ trong chunk đầu tiên. |
+| `Recall@5` | Tỷ lệ bằng chứng gold được bao phủ cộng dồn trong 5 chunks đầu. |
+| `MRR` | Thứ hạng của chunk liên quan đầu tiên, tính bằng `1 / rank`. |
+| `nDCG@5` | Chất lượng sắp xếp top-5 với relevance grade bằng số đơn vị bằng chứng mỗi chunk chứa. |
+| `Full Evidence@5` | Top-5 có đủ toàn bộ bằng chứng cần để trả lời hay không. |
+| `Faithfulness / Agent Accuracy` | Tỷ lệ nhóm từ khóa chuẩn trích từ tài liệu xuất hiện trong câu trả lời Agent. |
+| `Audience Match Rate` | Tỷ lệ kết quả có metadata `audience` đúng đối tượng hoặc bằng `all`. |
+
+Các chỉ số retrieval được chấm theo **nội dung bằng chứng trong chunk**, không chấm chỉ bằng tên tài liệu. Chạy `python bench.py` để sinh `ket_qua_benchmark.txt` và `benchmark/results.json`.
+
 ## Các Tiêu chí (Metric) Quan Trọng
 
 ### 1. Độ chính xác của Truy xuất (Retrieval Precision)

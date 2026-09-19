@@ -1,0 +1,377 @@
+{
+  "generated_at": "2026-09-19T16:09:47+07:00",
+  "embedding_provider": "gemini",
+  "embedding_backend": "gemini-embedding-001",
+  "chunk_size": 600,
+  "chunk_count": 127,
+  "audience_values": [
+    "student"
+  ],
+  "audience_filter": false,
+  "retrieval_only": false,
+  "macro_average": {
+    "recall_at_1": 0.5333333333333333,
+    "recall_at_5": 0.8666666666666666,
+    "mrr": 1.0,
+    "ndcg_at_5": 0.7605940995118967,
+    "full_evidence_at_5": 0.8,
+    "faithfulness_agent_accuracy": 0.7333333333333333,
+    "audience_match_rate": 1.0
+  },
+  "queries": [
+    {
+      "id": "Q1",
+      "query": "Sinh viên cần đáp ứng đầy đủ những điều kiện nào để tham gia OJT?",
+      "gold_answer": "Sinh viên phải hoàn thành ít nhất 90% tổng số tín chỉ từ học kỳ 1 đến học kỳ 5, không tính Giáo dục thể chất và Giáo dục quốc phòng; đồng thời phải đọc tài liệu OJT và tham gia đầy đủ Orientation bắt buộc.",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, thông tin chi tiết về các điều kiện cụ thể để tham gia OJT còn thiếu. \n\nNgữ cảnh chỉ đề cập đến việc sinh viên thuộc diện dự kiến tham dự OJT Spring 2026 cần phải tự đọc và nghiên cứu kỹ tài liệu về OJT và tham gia đầy đủ Orientation [1], và ngữ cảnh [4] có nhắc đến \"Sinh viên đủ điều kiện OJT khi thỏa mãn các điều kiện sau:\" nhưng nội dung phía sau đã bị cắt bỏ/thiếu trong ngữ cảnh.",
+      "metrics": {
+        "recall_at_1": 0.3333333333333333,
+        "recall_at_5": 0.3333333333333333,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.17171904689021833,
+        "full_evidence_at_5": 0.0,
+        "faithfulness_agent_accuracy": 0.0,
+        "audience_match_rate": 1.0
+      },
+      "top_5": [
+        {
+          "rank": 1,
+          "chunk_id": "07-ojt-regulations_c2",
+          "doc_id": "07-ojt-regulations",
+          "source": "07-ojt-regulations.md",
+          "audience": "student",
+          "score": 0.802897,
+          "matched_evidence": [
+            "ojt-orientation"
+          ],
+          "excerpt": "- Tất cả các sinh viên thuộc diện dự kiến tham dự **OJT SPRING 2026** đều phải **tự đọc và nghiên cứu kỹ tài liệu về OJT** (Sinh viên đọc tài liệu được gửi qua email) và tham gia đầy đủ **Orientation** để đảm bảo hiểu rõ và thực hiện đúng q"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "08-ojt-registration_c1",
+          "doc_id": "08-ojt-registration",
+          "source": "08-ojt-registration.md",
+          "audience": "student",
+          "score": 0.800721,
+          "matched_evidence": [],
+          "excerpt": "> **Lưu ý:** > Những sinh viên đã đăng ký OJT tại **AWS, Phú Quốc, FPT Software AI Quy Nhơn** và **OJT tại nước ngoài** theo các thông báo trước đây **không cần đăng ký lại**.  ### **2. Chuẩn bị hồ sơ trước khi đăng ký**  Sinh viên cần chuẩ"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "01-academic-regulations_c24",
+          "doc_id": "01-academic-regulations",
+          "source": "01-academic-regulations.md",
+          "audience": "student",
+          "score": 0.79596,
+          "matched_evidence": [],
+          "excerpt": "3. Điều kiện chuyển sang giai đoạn sau OJT:  - Đạt chương trình OJT theo quy định cụ thể của trường.  4. Điều kiện tốt nghiệp:  - Như quy định trong Điều 22 của Quy chế này.  Trường sẽ coi như sinh viên chủ động thôi học nếu không làm thủ t"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "07-ojt-regulations_c0",
+          "doc_id": "07-ojt-regulations",
+          "source": "07-ojt-regulations.md",
+          "audience": "student",
+          "score": 0.792016,
+          "matched_evidence": [],
+          "excerpt": "# [OJT SPRING 2026] - THÔNG BÁO THAM DỰ ORIENTATION OJT - Trường Đại học FPT  **Mến gửi các bạn sinh viên trong danh sách dự kiến tham gia OJT SPRING 2026,**  Nhằm chuẩn bị tốt cho việc triển khai ***Học kỳ tại doanh nghiệp (On the Job Trai"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "08-ojt-registration_c4",
+          "doc_id": "08-ojt-registration",
+          "source": "08-ojt-registration.md",
+          "audience": "student",
+          "score": 0.790981,
+          "matched_evidence": [],
+          "excerpt": "- Dự kiến khi doanh nghiệp tiếp nhận hồ sơ, nhà trường sẽ thông báo kết quả đăng ký OJT cho sinh viên qua email. Sinh viên theo dõi email để nắm thông tin. - Trong thời gian trước khi chính thức OJT, nhà trường sẽ liên tục đối chiếu với dữ "
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "query": "Học phí mỗi học kỳ năm 2026 của ngành Trí tuệ nhân tạo tại TP.HCM là bao nhiêu cho KV1 và các khu vực khác?",
+      "gold_answer": "Với tân sinh viên K22 nhập học năm 2026, ngành Trí tuệ nhân tạo có học phí mỗi học kỳ là 22.120.000 đồng ở KV1 và 31.600.000 đồng ở các khu vực khác.",
+      "answer": "Học phí mỗi học kỳ năm 2026 của ngành Trí tuệ nhân tạo tại campus TP.HCM là:\n- **KV1:** 22.120.000 VNĐ\n- **Các khu vực khác:** 31.600.000 VNĐ",
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "full_evidence_at_5": 1.0,
+        "faithfulness_agent_accuracy": 0.6666666666666666,
+        "audience_match_rate": 1.0
+      },
+      "top_5": [
+        {
+          "rank": 1,
+          "chunk_id": "03-tuition-hcm_c0",
+          "doc_id": "03-tuition-hcm",
+          "source": "03-tuition-hcm.md",
+          "audience": "student",
+          "score": 0.777506,
+          "matched_evidence": [
+            "tuition-cohort"
+          ],
+          "excerpt": "# Học phí tại campus Tp. Hồ Chí Minh - Trường Đại học FPT  # HỌC PHÍ TẠI CAMPUS TP. HỒ CHÍ MINH  *(Học phí chuẩn)*  *Học phí áp dụng cho tân sinh viên khóa K22 (nhập học năm 2026)*  *Học phí mỗi học kỳ (+)*"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "03-tuition-hcm_c1",
+          "doc_id": "03-tuition-hcm",
+          "source": "03-tuition-hcm.md",
+          "audience": "student",
+          "score": 0.743738,
+          "matched_evidence": [
+            "tuition-ai-row"
+          ],
+          "excerpt": "| Ngành/Chuyên ngành | KV1 | Các KV khác | | --- | --- | --- | | **Ngành Công nghệ thông tin** | | | | Công nghệ thông tin | 22.120.000 | 31.600.000 | | Kỹ thuật phần mềm | 22.120.000 | 31.600.000 | | Trí tuệ nhân tạo | 22.120.000 | 31.600."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "03-tuition-hcm_c4",
+          "doc_id": "03-tuition-hcm",
+          "source": "03-tuition-hcm.md",
+          "audience": "student",
+          "score": 0.720773,
+          "matched_evidence": [],
+          "excerpt": "| Quản trị dịch vụ Du lịch và Lữ hành | 15.480.000 | 22.120.000 | | Phân tích kinh doanh (Business Analytics) | 22.120.000 | 31.600.000 | | Logistics và quản lý chuỗi cung ứng toàn cầu | 22.120.000 | 31.600.000 | | Công nghệ tài chính | 22."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "06-campus-facilities-hcm_c14",
+          "doc_id": "06-campus-facilities-hcm",
+          "source": "06-campus-facilities-hcm.md",
+          "audience": "student",
+          "score": 0.681068,
+          "matched_evidence": [],
+          "excerpt": "Học kỳ Fall 2026, Trường Đại học FPT chào đón đoàn sinh viên trao đổi quốc tế đến từ đa quốc gia như Pháp, Đức, Ấn Độ và Nhật Bản. Đến từ các trường đại học đối tác KEDGE Business [...]  ##### [Sinh viên Trường Đại học FPT nhận học bổng TEE"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "03-tuition-hcm_c3",
+          "doc_id": "03-tuition-hcm",
+          "source": "03-tuition-hcm.md",
+          "audience": "student",
+          "score": 0.665013,
+          "matched_evidence": [],
+          "excerpt": "| **Ngành Luật** | | | | Luật | 15.480.000 | 22.120.000 | | Luật kinh tế | 15.480.000 | 22.120.000 | | **Ngành Quản trị kinh doanh** | | | | Marketing | 22.120.000 | 31.600.000 | | Kinh doanh quốc tế | 22.120.000 | 31.600.000 | | Thương mại"
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "query": "Hạn nộp hồ sơ học bổng năm 2026 là khi nào và GPA tối thiểu để duy trì học bổng là bao nhiêu?",
+      "gold_answer": "Hạn nộp hồ sơ học bổng là ngày 15/5/2026. Điều kiện duy trì học bổng khi theo học tại FPTU là GPA từ 7.0/10 trở lên.",
+      "answer": "Theo ngữ cảnh được cung cấp:\n\n- **Hạn nộp hồ sơ học bổng năm 2026:** 15/5/2026.\n- **GPA tối thiểu để duy trì học bổng:** GPA ≥ 7.0/10.",
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "full_evidence_at_5": 1.0,
+        "faithfulness_agent_accuracy": 1.0,
+        "audience_match_rate": 1.0
+      },
+      "top_5": [
+        {
+          "rank": 1,
+          "chunk_id": "04-scholarship-faq_c1",
+          "doc_id": "04-scholarship-faq",
+          "source": "04-scholarship-faq.md",
+          "audience": "student",
+          "score": 0.729128,
+          "matched_evidence": [
+            "scholarship-deadline"
+          ],
+          "excerpt": "### 3. Thí sinh có thể ứng tuyển nhiều hạng mục học bổng cùng lúc không?  Có. Trong trường hợp trúng tuyển nhiều hạng mục, thí sinh chỉ được lựa chọn 01 hạng mục học bổng để nhận.  ### 4. Nếu tôi được thầy cô đề cử thì có cần nộp hồ sơ khôn"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "04-scholarship-faq_c4",
+          "doc_id": "04-scholarship-faq",
+          "source": "04-scholarship-faq.md",
+          "audience": "student",
+          "score": 0.691989,
+          "matched_evidence": [
+            "scholarship-maintenance-gpa"
+          ],
+          "excerpt": "Giá trị học bổng cao nhất lên tới 100% học phí toàn khóa học, kèm theo các quyền lợi như sinh hoạt phí hằng tháng, mentorship, ngân sách trải nghiệm quốc tế và hỗ trợ dự án cá nhân/khởi nghiệp (tùy hạng mục).  ### 11. Điều kiện duy trì học "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "06-campus-facilities-hcm_c14",
+          "doc_id": "06-campus-facilities-hcm",
+          "source": "06-campus-facilities-hcm.md",
+          "audience": "student",
+          "score": 0.654309,
+          "matched_evidence": [],
+          "excerpt": "Học kỳ Fall 2026, Trường Đại học FPT chào đón đoàn sinh viên trao đổi quốc tế đến từ đa quốc gia như Pháp, Đức, Ấn Độ và Nhật Bản. Đến từ các trường đại học đối tác KEDGE Business [...]  ##### [Sinh viên Trường Đại học FPT nhận học bổng TEE"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "04-scholarship-faq_c0",
+          "doc_id": "04-scholarship-faq",
+          "source": "04-scholarship-faq.md",
+          "audience": "student",
+          "score": 0.651404,
+          "matched_evidence": [],
+          "excerpt": "# FAQ Học bổng - Trường Đại học FPT  ## **FAQ**  ### 1. Ai có thể tham gia chương trình?  Ưu tiên học sinh lớp 12 trên toàn quốc, có thành tích học tập tốt, năng lực nổi bật trong học thuật, công nghệ, lãnh đạo, khởi nghiệp hoặc có nghị lực"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "08-ojt-registration_c7",
+          "doc_id": "08-ojt-registration",
+          "source": "08-ojt-registration.md",
+          "audience": "student",
+          "score": 0.642136,
+          "matched_evidence": [],
+          "excerpt": "- Nếu sinh viên chưa được doanh nghiệp liên hệ trước ngày **31****/****12****/2025**, vui lòng liên hệ **Hotline: 0934-177-713** hoặc**Email:**[**[email protected]**](/cdn-cgi/l/email-protection#fb8a939f95d59d8e939896bb9d9ed59e9f8ed58d95) đ"
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "query": "Trên FAP, sinh viên gửi và theo dõi đơn online như thế nào, đồng thời xem báo cáo điểm danh ở đâu?",
+      "gold_answer": "Trong Academic Information, sinh viên chọn loại đơn hoặc mục Gửi Đơn, sau đó theo dõi kết quả tại mục Xem Đơn. Muốn xem điểm danh, vào mục Báo cáo rồi chọn Báo cáo điểm danh.",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, sinh viên thực hiện các thao tác trên FAP như sau:\n\n* **Gửi và theo dõi đơn online:** Vào mục **Academic Information**, chọn/vào mục **Gửi đơn** để tạo và gửi đơn theo nguyện vọng cho Nhà trường phê duyệt. Sau khi gửi, theo dõi kết quả tại mục **Xem đơn**.\n* **Xem báo cáo điểm danh:** Vào mục **Báo cáo** và nhấn vào **Báo cáo điểm danh** để xem thông tin điểm danh hàng ngày và các môn học đang được xếp.",
+      "metrics": {
+        "recall_at_1": 0.3333333333333333,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.631251450669265,
+        "full_evidence_at_5": 1.0,
+        "faithfulness_agent_accuracy": 1.0,
+        "audience_match_rate": 1.0
+      },
+      "top_5": [
+        {
+          "rank": 1,
+          "chunk_id": "02-fap-and-academic-procedures_c4",
+          "doc_id": "02-fap-and-academic-procedures",
+          "source": "02-fap-and-academic-procedures.md",
+          "audience": "student",
+          "score": 0.784273,
+          "matched_evidence": [
+            "fap-attendance"
+          ],
+          "excerpt": "Ngoài ra, để xem các môn học đang được xếp và thông tin điểm danh hàng ngày, bạn có thể vào mục Báo cáo, và nhấn vào báo cáo điểm danh để xem thông tin.  ## **ĐỐI VỚI GIAO DIỆN ỨNG DỤNG**  Bên cạnh giao diện website, bạn có thể sử dụng app "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "02-fap-and-academic-procedures_c0",
+          "doc_id": "02-fap-and-academic-procedures",
+          "source": "02-fap-and-academic-procedures.md",
+          "audience": "student",
+          "score": 0.764769,
+          "matched_evidence": [],
+          "excerpt": "# Hướng dẫn sử dụng cổng thông tin đào tạo FAP cho tân sinh viên Trường Đại học FPT - Trường Đại học FPT  *Trường Đại học FPT xin giới thiệu cổng thông tin đào tạo **FAP**, đây là nơi các bạn sinh viên có thể tra cứu toàn bộ các thông tin c"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "02-fap-and-academic-procedures_c2",
+          "doc_id": "02-fap-and-academic-procedures",
+          "source": "02-fap-and-academic-procedures.md",
+          "audience": "student",
+          "score": 0.719119,
+          "matched_evidence": [],
+          "excerpt": "Trong trường hợp xuất hiện các thông báo đặc biệt vui lòng nhấn phím **Home** để tiếp tục.  Đây là giao diện chính của cổng thông tin đào tạo FAP. Tại mục **news**: các bạn có thể xem được toàn bộ các thông báo của Nhà trường, nhấn vào More"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "02-fap-and-academic-procedures_c3",
+          "doc_id": "02-fap-and-academic-procedures",
+          "source": "02-fap-and-academic-procedures.md",
+          "audience": "student",
+          "score": 0.718632,
+          "matched_evidence": [
+            "fap-submit-request",
+            "fap-track-request"
+          ],
+          "excerpt": "- **Một là chức năng gửi đơn từ online**: Tại đây bạn lựa chọn các loại đơn từ theo nguyện vọng của mình, hoặc vào mục Gửi đơn để thêm các loại đơn từ gửi Nhà trường phê duyệt, sau khi gửi đơn bạn sẽ theo dõi tại mục Xem đơn để nhận kết quả"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "02-fap-and-academic-procedures_c1",
+          "doc_id": "02-fap-and-academic-procedures",
+          "source": "02-fap-and-academic-procedures.md",
+          "audience": "student",
+          "score": 0.688741,
+          "matched_evidence": [],
+          "excerpt": "## **ĐỐI VỚI GIAO DIỆN WEBSITE**  ### **Bước 1:** Bạn truy cập vào địa chỉ đăng nhập tại link: <https://fap.fpt.edu.vn/>.  Đây là giao diện khi đăng nhập.  - Bạn lựa chọn đặng nhập tại phần dành cho sinh viên phía bên phải. - Tại mục lựa ch"
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "query": "Sinh viên gặp vấn đề về thủ tục hành chính hoặc đời sống trong quá trình học tại campus TP.HCM thì liên hệ đơn vị nào, hotline và phòng bao nhiêu?",
+      "gold_answer": "Sinh viên liên hệ Phòng Dịch vụ Sinh viên, hotline 028 7300 5585, tại phòng 202 campus FPTU TP.HCM.",
+      "answer": "Sinh viên liên hệ:\n- **Đơn vị:** Phòng Dịch vụ sinh viên\n- **Hotline:** 028 7300 5585\n- **Phòng:** Phòng 202 – Campus Trường Đại học FPT TP.HCM",
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "full_evidence_at_5": 1.0,
+        "faithfulness_agent_accuracy": 1.0,
+        "audience_match_rate": 1.0
+      },
+      "top_5": [
+        {
+          "rank": 1,
+          "chunk_id": "05-student-services-hcm_c1",
+          "doc_id": "05-student-services-hcm",
+          "source": "05-student-services-hcm.md",
+          "audience": "student",
+          "score": 0.827965,
+          "matched_evidence": [
+            "student-services-hotline",
+            "student-services-room",
+            "student-services-scope"
+          ],
+          "excerpt": "*Hỗ trợ các dịch vụ liên quan đến thủ tục hành chính, hỗ trợ học tập, đời sống sinh viên và các vấn đề phát sinh trong quá trình học..*  **Hotline: 028 7300 5585**  **Email: [[email protected]](/cdn-cgi/l/email-protection#ee9d9d8d868d83ae88"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "05-student-services-hcm_c0",
+          "doc_id": "05-student-services-hcm",
+          "source": "05-student-services-hcm.md",
+          "audience": "student",
+          "score": 0.800531,
+          "matched_evidence": [],
+          "excerpt": "# Liên hệ  # Liên hệ  *Hỗ trợ sinh viên và phụ huynh các thông tin về Đại học FPT TP.HCM. Vui lòng liên hệ trong giờ hành chính để được hướng dẫn và giải đáp.*  ## **PHÒNG TƯ VẤN TUYỂN SINH**  *Phụ trách tư vấn, cung cấp thông tin tuyển sin"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "10-departments-and-support-routing-hcm_c0",
+          "doc_id": "10-departments-and-support-routing-hcm",
+          "source": "10-departments-and-support-routing-hcm.md",
+          "audience": "student",
+          "score": 0.748859,
+          "matched_evidence": [],
+          "excerpt": "# Liên hệ & Bản đồ  ## Lãnh đạo và Phòng Ban tại **Campus TP. Hồ Chí Minh**  ## Thầy Trần Ngọc Tuấn  Giám đốc Phân hiệu Trường Đại học FPT tại TP. HCM  TS. Trần Ngọc Tuấn hiện là Phó Hiệu trưởng Trường Đại học FPT, đồng thời là Giám đốc cơ "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "08-ojt-registration_c3",
+          "doc_id": "08-ojt-registration",
+          "source": "08-ojt-registration.md",
+          "audience": "student",
+          "score": 0.73758,
+          "matched_evidence": [],
+          "excerpt": "Trong thời gian đăng ký, nếu gặp sự cố hoặc cần hỗ trợ, sinh viên liên hệ:  - **Hotline:** 0934-177-713 - **Email:** [[email protected]](/cdn-cgi/l/email-protection#b3c2dbd7dd9dd5c6dbd0def3d5d69dd6d7c69dc5dd)  ### **4. Sau khi đăng ký**"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "08-ojt-registration_c6",
+          "doc_id": "08-ojt-registration",
+          "source": "08-ojt-registration.md",
+          "audience": "student",
+          "score": 0.707749,
+          "matched_evidence": [],
+          "excerpt": "- Trường hợp sinh viên bị đánh giá không phù hợp và doanh nghiệp từ chối tiếp nhận, sinh viên liên hệ Phòng Quan hệ doanh nghiệp theo thông tin bên dưới để được tư vấn và hỗ trợ chuyển sang doanh nghiệp khác. - Trường hợp sinh viên bị nhiều"
+        }
+      ]
+    }
+  ]
+}

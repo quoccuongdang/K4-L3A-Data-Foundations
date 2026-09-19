@@ -1,0 +1,90 @@
+FPTU RAG BENCHMARK — 5 QUERIES / 7 METRICS
+========================================================================================
+Thời gian: 2026-09-19T16:09:47+07:00
+Embedding: gemini-embedding-001
+Chunking: RecursiveChunker(chunk_size=600)
+Số chunks: 127
+Audience trong corpus: student
+Audience pre-filter: Không
+
+ID	Recall@1	Recall@5	MRR	nDCG@5	Full Evidence@5	Agent Accuracy	Audience Match
+Q1	33.3%	33.3%	100.0%	17.2%	0.0%	0.0%	100.0%
+Q2	50.0%	100.0%	100.0%	100.0%	100.0%	66.7%	100.0%
+Q3	50.0%	100.0%	100.0%	100.0%	100.0%	100.0%	100.0%
+Q4	33.3%	100.0%	100.0%	63.1%	100.0%	100.0%	100.0%
+Q5	100.0%	100.0%	100.0%	100.0%	100.0%	100.0%	100.0%
+----------------------------------------------------------------------------------------
+MACRO	53.3%	86.7%	100.0%	76.1%	80.0%	73.3%	100.0%
+
+ĐỊNH NGHĨA
+- Recall@k: tỷ lệ đơn vị bằng chứng gold xuất hiện trong top-k chunks.
+- MRR: nghịch đảo thứ hạng của chunk đầu tiên chứa bằng chứng gold.
+- nDCG@5: chất lượng thứ tự top-5; grade = số đơn vị bằng chứng trong chunk.
+- Full Evidence@5: 1 khi top-5 bao phủ toàn bộ bằng chứng bắt buộc, ngược lại 0.
+- Agent Accuracy: tỷ lệ nhóm từ khóa gold có mặt trong câu trả lời của Agent.
+- Audience Match: tỷ lệ top-5 có audience đúng đối tượng hoặc audience=all.
+
+CẢNH BÁO AUDIENCE
+Corpus chỉ có một giá trị audience. Audience Match Rate vẫn được tính nhưng chưa
+đủ sức kiểm tra lỗi lấy nhầm tài liệu faculty/staff. Cần thêm nguồn khác audience
+hoặc một bộ distractor có provenance trước khi dùng chỉ số này để kết luận.
+
+CHI TIẾT TỪNG QUERY
+
+Q1. Sinh viên cần đáp ứng đầy đủ những điều kiện nào để tham gia OJT?
+Gold: Sinh viên phải hoàn thành ít nhất 90% tổng số tín chỉ từ học kỳ 1 đến học kỳ 5, không tính Giáo dục thể chất và Giáo dục quốc phòng; đồng thời phải đọc tài liệu OJT và tham gia đầy đủ Orientation bắt buộc.
+Agent: Dựa trên ngữ cảnh được cung cấp, thông tin chi tiết về các điều kiện cụ thể để tham gia OJT còn thiếu. 
+
+Ngữ cảnh chỉ đề cập đến việc sinh viên thuộc diện dự kiến tham dự OJT Spring 2026 cần phải tự đọc và nghiên cứu kỹ tài liệu về OJT và tham gia đầy đủ Orientation [1], và ngữ cảnh [4] có nhắc đến "Sinh viên đủ điều kiện OJT khi thỏa mãn các điều kiện sau:" nhưng nội dung phía sau đã bị cắt bỏ/thiếu trong ngữ cảnh.
+  #1 score=0.8029 doc=07-ojt-regulations audience=student evidence=ojt-orientation
+  #2 score=0.8007 doc=08-ojt-registration audience=student evidence=-
+  #3 score=0.7960 doc=01-academic-regulations audience=student evidence=-
+  #4 score=0.7920 doc=07-ojt-regulations audience=student evidence=-
+  #5 score=0.7910 doc=08-ojt-registration audience=student evidence=-
+
+Q2. Học phí mỗi học kỳ năm 2026 của ngành Trí tuệ nhân tạo tại TP.HCM là bao nhiêu cho KV1 và các khu vực khác?
+Gold: Với tân sinh viên K22 nhập học năm 2026, ngành Trí tuệ nhân tạo có học phí mỗi học kỳ là 22.120.000 đồng ở KV1 và 31.600.000 đồng ở các khu vực khác.
+Agent: Học phí mỗi học kỳ năm 2026 của ngành Trí tuệ nhân tạo tại campus TP.HCM là:
+- **KV1:** 22.120.000 VNĐ
+- **Các khu vực khác:** 31.600.000 VNĐ
+  #1 score=0.7775 doc=03-tuition-hcm audience=student evidence=tuition-cohort
+  #2 score=0.7437 doc=03-tuition-hcm audience=student evidence=tuition-ai-row
+  #3 score=0.7208 doc=03-tuition-hcm audience=student evidence=-
+  #4 score=0.6811 doc=06-campus-facilities-hcm audience=student evidence=-
+  #5 score=0.6650 doc=03-tuition-hcm audience=student evidence=-
+
+Q3. Hạn nộp hồ sơ học bổng năm 2026 là khi nào và GPA tối thiểu để duy trì học bổng là bao nhiêu?
+Gold: Hạn nộp hồ sơ học bổng là ngày 15/5/2026. Điều kiện duy trì học bổng khi theo học tại FPTU là GPA từ 7.0/10 trở lên.
+Agent: Theo ngữ cảnh được cung cấp:
+
+- **Hạn nộp hồ sơ học bổng năm 2026:** 15/5/2026.
+- **GPA tối thiểu để duy trì học bổng:** GPA ≥ 7.0/10.
+  #1 score=0.7291 doc=04-scholarship-faq audience=student evidence=scholarship-deadline
+  #2 score=0.6920 doc=04-scholarship-faq audience=student evidence=scholarship-maintenance-gpa
+  #3 score=0.6543 doc=06-campus-facilities-hcm audience=student evidence=-
+  #4 score=0.6514 doc=04-scholarship-faq audience=student evidence=-
+  #5 score=0.6421 doc=08-ojt-registration audience=student evidence=-
+
+Q4. Trên FAP, sinh viên gửi và theo dõi đơn online như thế nào, đồng thời xem báo cáo điểm danh ở đâu?
+Gold: Trong Academic Information, sinh viên chọn loại đơn hoặc mục Gửi Đơn, sau đó theo dõi kết quả tại mục Xem Đơn. Muốn xem điểm danh, vào mục Báo cáo rồi chọn Báo cáo điểm danh.
+Agent: Dựa trên ngữ cảnh được cung cấp, sinh viên thực hiện các thao tác trên FAP như sau:
+
+* **Gửi và theo dõi đơn online:** Vào mục **Academic Information**, chọn/vào mục **Gửi đơn** để tạo và gửi đơn theo nguyện vọng cho Nhà trường phê duyệt. Sau khi gửi, theo dõi kết quả tại mục **Xem đơn**.
+* **Xem báo cáo điểm danh:** Vào mục **Báo cáo** và nhấn vào **Báo cáo điểm danh** để xem thông tin điểm danh hàng ngày và các môn học đang được xếp.
+  #1 score=0.7843 doc=02-fap-and-academic-procedures audience=student evidence=fap-attendance
+  #2 score=0.7648 doc=02-fap-and-academic-procedures audience=student evidence=-
+  #3 score=0.7191 doc=02-fap-and-academic-procedures audience=student evidence=-
+  #4 score=0.7186 doc=02-fap-and-academic-procedures audience=student evidence=fap-submit-request,fap-track-request
+  #5 score=0.6887 doc=02-fap-and-academic-procedures audience=student evidence=-
+
+Q5. Sinh viên gặp vấn đề về thủ tục hành chính hoặc đời sống trong quá trình học tại campus TP.HCM thì liên hệ đơn vị nào, hotline và phòng bao nhiêu?
+Gold: Sinh viên liên hệ Phòng Dịch vụ Sinh viên, hotline 028 7300 5585, tại phòng 202 campus FPTU TP.HCM.
+Agent: Sinh viên liên hệ:
+- **Đơn vị:** Phòng Dịch vụ sinh viên
+- **Hotline:** 028 7300 5585
+- **Phòng:** Phòng 202 – Campus Trường Đại học FPT TP.HCM
+  #1 score=0.8280 doc=05-student-services-hcm audience=student evidence=student-services-hotline,student-services-room,student-services-scope
+  #2 score=0.8005 doc=05-student-services-hcm audience=student evidence=-
+  #3 score=0.7489 doc=10-departments-and-support-routing-hcm audience=student evidence=-
+  #4 score=0.7376 doc=08-ojt-registration audience=student evidence=-
+  #5 score=0.7077 doc=08-ojt-registration audience=student evidence=-
